@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cronometro</title>
+</head>
+<style>
+    *{
+       margin: 0 auto; 
+       padding: 0;
+    }
+
+    body{
+        background-color: black; /* a parte central da aplicação */
+    }
+
+    .max-widht{
+        max-width: 400px; /* largura-maxima */
+        width: 100%; /* largura */
+        padding: 10px; /* preenchimento */
+        box-sizing: border-box; /* dimensionamento da caixa */
+        margin-top: 10%; /* margen superior */
+        background-color: white; /* cor de fundo */
+        box-shadow: white; /* sombra da caixa */
+    }
+
+    h1 {
+        font-family: 'Courier New', Courier, monospace; /*permite que se faça uma lista de prioridades de familias de fontes e/ou nomes genéricos de famílias a serem especificados para um elemento selecionado*/
+        margin: 20px; /*É a margem do elemento, ou seja, o espaçamento externo do elemento. Define a margem superior do elemento.*/
+    }
+
+    button {
+        padding: 10px;
+        border: none;/*Ela permite separar um espaço do layout de uma página, definindo onde vai aparecer.*/
+        font-family:"segue UI" ; 
+        transition: all .5s; /*fornecem uma maneira de controlar a velocidade da animação ao alterar as propriedades CSS. */
+        cursor:pointer; /*A propriedade cursor CSS define o cursor do mouse, se houver, para mostrar quando o ponteiro do mouse está sobre um elemento*/
+        border-radius: 25px; /*destina-se a definir bordas arredondadas. O arredondamento das bordas é feito com declaração de dois valores CSS de medida; o primeiro define o eixo horizontal (rx) de 1/4 de uma elipse e o segundo o eixo vertical (ry*/
+
+    }
+
+    button:hover{
+        /*possibilita um elemento ter o seu estilo alterado através da ação do usuário, quando o próprio passa o cursor do mouse sobre o elemento. Este recurso é bastante utilizado para adicionar funcionalidades de interação em uma aplicação web.*/
+        background-color: #a1c0d1;
+
+    }
+    .bg-green {
+        /*A propriedade CSS background é um atalho para definir os valores de fundo individuais em um único lugar na folha de estilo*/
+        background-color: #b2d1a1;
+    }
+
+    .bg-yellow {
+        background-color: #d1cba1;
+    }
+
+        .bg-red{
+            background-color: #d1a1a1;
+        }
+
+</style>
+
+<body>
+    <div class="max-widht"> <!--O elemento HTML Div define uma divisão ou seção em um documento HTML. O elemento div é frequentemente usado como um contêiner para outros elementos, o que facilita na estilização de blocos-->
+        <button onclick="start();" class="bg-green">iniciar</button> <!--onclick executa determinada funcionalidade quando um botão é clicado. Isso pode ocorrer quando um usuário envia um formulário, quando você altera determinado conteúdo na página da web e assim por diante. Você coloca a função em JavaScript que você quer executar dentro da tag de abertura do botão-->
+        <button class="bg-yellow">pausar</button> <!--Classes (ou seja, classnames) são usadas para estilizar o elemento de botão. Vários nomes de classe são separados por um espaço. JavaScript usa classes para acessar elementos por nome de classe. Dica: class é um atributo global que pode ser aplicado a qualquer elemento HTML.-->
+        <button class="bg-red">parar</button>
+        <h1 id="counter">00:00:00</h1> <!--O atributo Id especifica uma identificação única para o elemento HTML. Por questões de boas práticas, não deve ser reutilizado e nem conter espaços em seu nome, pois o navegador irá identificar o espaço como parte dele, já que os elementos não podem ter mais de um Id.-->
+
+    </div>
+    <script src="cron.js"></script> <!--Linguagem de script ou scripting é uma linguagem de programação que suporta scripts, programas escritos para um sistema de tempo de execução especial que automatiza a execução de tarefas que seriam executadas, uma de cada vez, por um operador humano. Linguagens de script são frequentemente interpretadas-->
+    
+</body>
+</html>
